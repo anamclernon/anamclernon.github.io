@@ -6,7 +6,7 @@ body {
 h1 {
     color: black;
     font-size: 50px;
-    padding: 50px;
+    padding: 10px;
 }
 
 hr {
@@ -18,7 +18,9 @@ h2 {
     font-size: 30 px;
     text-decoration: None;
 }
+
 p, ul {
+    line-height: 150%;
     color: black;
 }
 
@@ -26,14 +28,62 @@ u{
     text-decoration: None;
 }
 
-.buttondiv {
-    align-items: flex-end;
-    padding-left: 400px;
-    padding-right: 10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+img{
+    border-radius: 50%;
 }
 
+.container{
+    position: relative;
+    align-items: center;
+    width: 500px;
+    max-width: 500px;
+    border-radius: 50%;
+}
+
+.image{
+    display:block;
+    width:500px;
+    height:500px;
+}
+
+.overlay {
+    position: absolute;
+    align-items: center;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    transition: .5s ease;
+    opacity:0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+  }
+
+.container:hover .overlay {
+opacity: 1;
+}
+
+.button-right {
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+    padding-right:150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.button-left{
+    align-items: center;
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .pink {
     background-color: pink;
 }
@@ -41,25 +91,24 @@ u{
     background-color: azure;
 }
 .button {
+    background-color: #ab88e0;
     border: none;
-    color: white;
-    padding: 50px 50px;
+    width: 100px;
+    height: 100px;
+    color: black;
     text-align: center;
     text-decoration: none;
-    display: grid;
+    display: table-cell;
     font-size: 20px;
     margin: auto;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 50%;
+    vertical-align: middle;
   }
   
-  .button1 {
-    background-color: #ab88e0;
-    color: black;
-  }
   
-  .button1:hover {
+  .button:hover {
     background-color: #4616ae;
     color: white;
   }
